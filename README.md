@@ -1,0 +1,18 @@
+executiontype = remote
+browsername = chrome
+gridurl = http://localhost:4444
+url = https://dashboard.stripe.com/login
+
+
+Project/config/
+
+src/main
+# Define the root logger with the DailyRollingFileAppender
+log4j.rootLogger=DEBUG, RollingAppender
+
+# Configure the DailyRollingFileAppender
+log4j.appender.RollingAppender=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.RollingAppender.File=logs/log.log
+#log4j.appender.RollingAppender.DatePattern='.'yyyy-MM-dd_HH-mm-ss
+log4j.appender.RollingAppender.layout=org.apache.log4j.PatternLayout
+log4j.appender.RollingAppender.layout.ConversionPattern=[%d{yyyy-MM-dd HH:mm:ss}] [%p] %c %M - %m%n
